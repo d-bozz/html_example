@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Forms</title>
+        <style>
+
+            #register-form{
+                width: 300px;
+                background-color: white;
+                padding: 24px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .input-label{
+                margin: 0;
+                margin-bottom: 4px;
+                margin-top: 12px;
+            }
+
+            .input-item{
+                width: 100%;
+            }
+
+            #terms-check{
+                margin-top: 12px;
+                margin-bottom: 18px;
+            }
+
+        </style>
+    </head>
+    <body style="background-color: lightblue;">
+        <header id="header">
+            <nav id="navbar">
+                <span><a href="/index.html">Home</a></span>
+            </nav>
+        </header> 
+        <h1 style="text-align: center;">Example Form</h1>
+        <form id="register-form" method="GET">
+            <div>
+                <p class="input-label">Full Name:</p>
+                <input class="input-item" type="text" name="full-name" placeholder="Full Name" autofocus required max="25">
+            </div>
+            <div>
+                <p class="input-label">Email:</p>
+                <input class="input-item" type="email" name="email" placeholder="email" required max="25">
+            </div>
+            <div>
+                <p class="input-label">Age:</p>
+                <input class="input-item" type="number" name="age" min="18" max="46">
+            </div>
+            <div>
+                <p class="input-label">Password:</p>
+                <input class="input-item" type="password" name="password" placeholder="password" maxlength="8">
+            </div>
+            <div>
+                <p class="input-label">Confirm Password:</p>
+                <input class="input-item" type="password" name="confirm-password" placeholder="confirm password" maxlength="8">
+            </div>
+            <div>
+                <p class="input-label">Gender:</p>
+                <input type="radio" name="male" value="male"> Male </input>
+                <input type="radio" name="female" value="female"> Female </input>
+                <input type="radio" name="other" value="other"> Other </input>
+            </div>
+            <div>
+                <p class="input-label">Security Questions:</p>
+                <select class="input-item" name="security-questions">
+                    <option value="first-pet-name">What was your first pet name?</option>
+                    <option value="first-job-name">What was your first job name?</option>
+                    <option value="first-nick-name">What was your first nick name?</option>
+                </select>
+            </div>
+            <div>
+                <textarea name="answer" rows="6" cols="30"></textarea>
+            </div>
+            <div>
+                <input id="terms-check" type="checkbox" name="terms-conditions" value="accept"> I agree to accept the terms and conditions
+            </div>
+
+            <input list="technologies" name="technologies" placeholder="pick one"/>
+            <datalist id="technologies">
+                <option value="HTML">
+                <option value="CSS">
+                <option value="JavaScript">
+                <option value="Java">
+                <option value="C++">    
+                <option value="Git">
+                <option value="React">
+                <option value="Redux">    
+                <option value="Python">
+                <option value="PHP">
+                <option value="Django">  
+            </datalist>
+            <br><br>
+            <div>
+                <input type="date" name="date" max="1999-01-01">
+                <input type="date" name="enddate" min="2010-01-01">
+                <br><br>
+                <input type="file" name="image">
+            </div>
+            <br>
+            <div style="text-align: center;">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </body>
+</html>

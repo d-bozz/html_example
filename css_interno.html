@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Para definir un CSS externo: <link rel="stylesheet" href="styles.css"> -->
+        <!-- Para utilizar una hoja de estilo externa, agréguele un enlace en la <head>sección de cada página HTML: -->
+        <meta charset="UTF-8">
+        <title>Ejemplo de HTML usando CSS interno</title>
+        <!-- Un CSS interno se define en la <head>sección de una página HTML, dentro de un <style>elemento. -->
+        <style>
+            
+            #header{
+                background-color: lightblue;
+                padding: 16px;
+            }
+
+            #navbar{
+                background-color: lightcoral;
+                padding: 8px;
+            }
+
+            #main-section{
+                background-color: lightgray;
+                padding: 24px;
+            }
+
+            #section{
+                background-color: lightgreen;
+                padding: 16px;
+            }
+
+            .article{
+                background-color: lightseagreen;
+                padding: 16px;
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+
+            #footer{
+                background-color: lightskyblue;
+                padding: 24px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header id="header">
+        <nav id="navbar">
+            <span><a href="/index.html">Home</a></span>
+        </nav>
+    </header>
+    <main id="main-section">
+        <section id="section">
+            <article class="article">
+                <header>
+                    <h3>Articulo uno</h3>
+                    <a href="/">Autor uno</a>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi id debitis dolore placeat sed, error iure voluptate dolorem ut ipsa minus ipsam veniam molestiae numquam ducimus mollitia consequatur excepturi nemo?</p>
+            </article>
+            <article class="article">
+                <header>
+                    <h3>Articulo dos</h3>
+                    <a href="/">Autor dos</a>
+                </header>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi id debitis dolore placeat sed, error iure voluptate dolorem ut ipsa minus ipsam veniam molestiae numquam ducimus mollitia consequatur excepturi nemo?</p>
+            </article>
+        </section>
+    </main>
+    <footer id="footer">
+        <p>Copyright 2019</p>
+    </footer>
+    </body>
+</html>
