@@ -39,70 +39,97 @@
         <h1 style="text-align: center;">Example Form</h1>
         <form id="register-form" method="GET">
             <div>
-                <p class="input-label">Full Name:</p>
-                <input class="input-item" type="text" name="full-name" placeholder="Full Name" autofocus required max="25">
+                <label class="input-label" for="fname">Full name:</label><br>
+                <input class="input-item" type="text" name="fname" placeholder="Full Name" 
+                autofocus required max="25" id="fname">
             </div>
             <div>
-                <p class="input-label">Email:</p>
-                <input class="input-item" type="email" name="email" placeholder="email" required max="25">
+                <label class="input-label" for="phone">Phone:</label><br>
+                <input class="input-item" type="number" name="phone" placeholder="123 456 789" 
+               max="9" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
             </div>
             <div>
-                <p class="input-label">Age:</p>
-                <input class="input-item" type="number" name="age" min="18" max="46">
+                <label class="input-label" for="email">Email:</label><br>
+                <input class="input-item" type="email" name="email" placeholder="email" 
+                required max="25" id="email">
             </div>
             <div>
-                <p class="input-label">Password:</p>
-                <input class="input-item" type="password" name="password" placeholder="password" maxlength="8">
+                <label class="input-label" for="age">Age:</label><br>
+                <input class="input-item" type="number" name="age" min="18" max="46"
+                id="age" placeholder="age">
             </div>
             <div>
-                <p class="input-label">Confirm Password:</p>
-                <input class="input-item" type="password" name="confirm-password" placeholder="confirm password" maxlength="8">
+                <label class="input-label" for="password">Password:</label><br>
+                <input class="input-item" type="password" name="password" placeholder="password" 
+                maxlength="8" id="password">
             </div>
             <div>
-                <p class="input-label">Gender:</p>
-                <input type="radio" name="male" value="male"> Male </input>
-                <input type="radio" name="female" value="female"> Female </input>
-                <input type="radio" name="other" value="other"> Other </input>
+                <label class="input-label" for="confirm-password">Confirm Password:</label><br>
+                <input class="input-item" type="password" name="confirm-password" placeholder="confirm password" 
+                maxlength="8" id="confirm-password">
             </div>
             <div>
-                <p class="input-label">Security Questions:</p>
-                <select class="input-item" name="security-questions">
+                <label class="input-label" for="ronly">Read Only:</label><br>
+                <input class="input-item" type="text" name="ronly"  
+                autofocus required max="25" id="ronly" value="Read Only" readonly>
+            </div>
+            <div>
+                <label class="input-label" for="disabled">Disabled:</label><br>
+                <input class="input-item" type="text" name="disabled" placeholder="Disabled" 
+                autofocus required max="25" id="disabled" disabled>
+            </div>
+            <div>
+                <p>Genero:</p>
+                <input type="radio" name="genre" id="male" value="male">
+                <label for="male">male</label><br>
+                <input type="radio" name="genre" id="female" value="female"> Female </input>
+                <label for="female">female</label><br>
+                <input type="radio" name="genre" id="other" value="other"> Other </input>
+                <label for="other">other</label><br>
+            </div>
+            <div>
+                <label class="input-label" for="security">Security Question:</label><br>
+                <select class="input-item" name="security" id="security">
                     <option value="first-pet-name">What was your first pet name?</option>
                     <option value="first-job-name">What was your first job name?</option>
                     <option value="first-nick-name">What was your first nick name?</option>
                 </select>
             </div>
             <div>
-                <textarea name="answer" rows="6" cols="30"></textarea>
+                <label class="input-label" for="comment">Comentarios:</label><br>
+                <textarea name="comment" id="comment" rows="6" cols="30"></textarea>
             </div>
             <div>
-                <input id="terms-check" type="checkbox" name="terms-conditions" value="accept"> I agree to accept the terms and conditions
+                <input id="terms-check" type="checkbox" name="terms-check" value="accept">
+                <label for="terms-check"> I agree to accept the terms and conditions</label>
             </div>
 
+            <label for="technologies">Pick a technology:</label>
             <input list="technologies" name="technologies" placeholder="pick one"/>
             <datalist id="technologies">
-                <option value="HTML">
-                <option value="CSS">
-                <option value="JavaScript">
-                <option value="Java">
-                <option value="C++">    
-                <option value="Git">
-                <option value="React">
-                <option value="Redux">    
-                <option value="Python">
-                <option value="PHP">
-                <option value="Django">  
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Java">Java</option>
+                <option value="C++">C++</option>    
+                <option value="Git">Git</option>
+                <option value="React">React</option>
+                <option value="Redux">Redux</option>    
+                <option value="Python">Python</option>
+                <option value="PHP">PHP</option>
+                <option value="Django">Django</option>  
             </datalist>
             <br><br>
             <div>
-                <input type="date" name="date" max="1999-01-01">
-                <input type="date" name="enddate" min="2010-01-01">
+                <input type="date" name="fromdate" id="fromdate" max="2100-01-01" min="1900-01-01">
+                <input type="date" name="todate" id="todate" max="2100-01-01" min="1900-01-01">
                 <br><br>
-                <input type="file" name="image">
+                <input type="files" name="files" id="files" multiple>
             </div>
             <br>
             <div style="text-align: center;">
                 <input type="submit" value="Submit">
+                <input type="reset">
             </div>
         </form>
     </body>
